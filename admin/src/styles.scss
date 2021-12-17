@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+        //display: flex;
+        justify-self: space-between;
+    }
+    .mat-drawer.mat-drawer-side {
+        display: none !important;
+    }
+    .mat-drawer-content {
+        margin-left: 0 !important;
+    }
+    #section-to-print,
+    #section-to-print * {
+        visibility: visible;
+        color: black !important;
+        background-color: transparent !important;
+        page-break-after: always !important;
+        .qr {
+            display: block !important;
+        }
+        table {
+            break-inside: avoid;
+        }
+    }
+    #section-to-print {
+        break-inside: avoid;
+        position: fixed;
+        left: 0px !important;
+        right: 0px !important;
+        margin: auto;
+        top: 0;
+    }
+}

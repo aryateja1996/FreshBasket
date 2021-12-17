@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "capstone-295608": {
+      "hosting": {
+        "octomartAngular": [
+          "capstone-295608"
+        ]
+      }
+    }
+  }
+}

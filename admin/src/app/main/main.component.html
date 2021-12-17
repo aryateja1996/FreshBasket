@@ -1,0 +1,66 @@
+<div class="action-bar">
+    <div class="user-selection">
+        <mat-select [formControl]="selectedUserCtrl" (selectionChange)="userChange()" placeholder="Select User">
+            <mat-option *ngFor="let user of users" [value]="user.id">{{user.id}}</mat-option>
+        </mat-select>
+    </div>
+</div>
+<ng-container *ngIf="selectedUser">
+    <div class="ting" id="section-to-print">
+        <div class="ng-container">
+            <div class="qr">
+                <img src="./assets/Qr.jpg" alt="" srcset="" style="width: 150px; height:150px; ">
+            </div>
+            <div class="logo">
+                <p>Octo Mart</p>
+            </div>
+            <div class="addSection">
+
+                <div class="custDetails">
+                    <p>Name : {{selectedUser.username}}</p>
+                    <p>Address : {{selectedUser.address}}</p>
+                    <p>Phone : {{selectedUser.phone}}</p>
+
+                </div>
+                <div class="shopDetails">
+                    <p>Date : {{mydate | date: 'shortDate'}}</p>
+                    <p>Shop Name : Octo Mart</p>
+                    <p>Address : Shamirpet</p>
+                    <p>Email : octomart2828@gmail.com</p>
+                </div>
+            </div>
+
+            <table class="table table-striped">
+                <th>S.no</th>
+                <th>Product Name</th>
+                <th>MRP</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Price/Unit</th>
+                <th>Total</th>
+                <tr class="tr" *ngFor="let item of selectedUser.products; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{item.id}}</td>
+                    <td class="num">{{item.mrp}}</td>
+                    <td class="num">{{item.quantity}}</td>
+                    <td class="num">{{(item.discount * item.quantity).toFixed(2)}}</td>
+                    <td class="num">{{(item.price).toFixed(2)}}</td>
+                    <td class="num">{{(item.quantity * item.price).toFixed(2)}}</td>
+                </tr>
+            </table>
+            <div class="total">
+                <p>Total : {{(selectedUser.total).toFixed(2)}} </p>
+                <p>You Save : {{(selectedUser.usave).toFixed(2)}}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="print">
+        <button mat-icon-button color="accent" aria-label="Print" (click)="prtscr()">
+        <mat-icon>print</mat-icon>
+    </button>
+    </div>
+</ng-container>
