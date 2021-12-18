@@ -1,27 +1,36 @@
 <div class="container">
     <div class="row justify-content-center p-2">
-        <h1>Upload Data</h1>
+        <h1>Upload Data </h1>
+        <p>Please Fill all the details</p>
     </div>
     <div class="from-group">
-        <input type="text" class="form-control" placeholder="Enter Name">
-    </div>
-    <br>
-    <div class="from-group">
-        <input type="number" class="form-control" placeholder="Enter Price">
-    </div><br>
-    <div class="from-group">
-        <input type="number" class="form-control" placeholder="Enter Offer">
-    </div><br>
-    <div class="from-group">
-        <input type="text" class="form-control" placeholder="Enter id">
+        <input type="text" id= 'name'class="form-control" placeholder="Enter Name" ng-required = "true">
     </div>
     <br>
     <div class="from-group">
-        <input type="file" class="form-control">
+        <input type="number" id="price" class="form-control" placeholder="Enter Price" ng-required = "true">
+    </div><br>
+    <div class="from-group">
+        <input type="number" id="offerAmount" class="form-control" ng-required = "true" placeholder="Enter Offer Amount">
+    </div><br>
+    <div class="from-group">
+        <input type="text" class="form-control" ng-required = "true" placeholder="Enter Product id" id="id">
+    </div>
+    <br>
+    <div class="from-group">
+        <input type="file" (change) = "uploadFile($event)" ng-required = "true" class="form-control">
         <br>
         <button 
+        [disabled] = "isDisabled"
+        (click) = "uploadButton()"
         class="btn btn-success">
         Upload
     </button>
+    <br><br>
     </div>
+    
+    <div id="percent">{{ uploadPercent | async}} </div>
+    <br>
+    <br>
+    <p id="msg" [ngClass] = "final">{{message}}</p>
 </div>

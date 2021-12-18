@@ -10,9 +10,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { AngularFireModule } from '@angular/fire';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore'
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
@@ -35,8 +37,10 @@ import { UploadComponent } from './upload/upload.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatProgressBarModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
