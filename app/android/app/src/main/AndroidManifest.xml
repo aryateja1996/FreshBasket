@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.indiworks.app">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
    <application
         android:label="app"
         android:icon="@mipmap/ic_launcher">
@@ -26,6 +30,10 @@
             <meta-data
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
+              />
+              <meta-data
+                android:name = "com.google.android.geo.AIzaSyAWK5KXdv6nw5-ejs-Yye77_UARMstYpXw"
+                android:value = "${AIzaSyAWK5KXdv6nw5-ejs-Yye77_UARMstYpXw}"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

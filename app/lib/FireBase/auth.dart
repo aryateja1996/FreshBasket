@@ -12,11 +12,11 @@ Future<void> login(BuildContext context) async {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => Home(),
+            builder: (context) => const Home(),
           ),
           (route) => false);
-    } catch (e) {
-      
+    } on FirebaseAuthException catch  (e) {
+      _showMyDialogError(e.code, context);
     }
   }
 
@@ -48,8 +48,8 @@ Future<void> login(BuildContext context) async {
       try {
       var result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: regEmail, password: regPassword);
-    } catch (e) {
-     
+    } on FirebaseAuthException catch  (e){
+     _showMyDialogError(e.code, context);
     }
     var result;
     await FirebaseFirestore.instance

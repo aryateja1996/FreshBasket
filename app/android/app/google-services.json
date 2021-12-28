@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "949274478999",
+    "project_id": "fresh-basket-66d8c",
+    "storage_bucket": "fresh-basket-66d8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949274478999:android:b1101237c19c834fb2dcd2",
+        "android_client_info": {
+          "package_name": "com.indiworks.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949274478999-qm1t0uv41p0jq3iiujmccs99kr05lfbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX-iqrYhQwc_SUwD5TcbFvOXsc784i8wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949274478999-qm1t0uv41p0jq3iiujmccs99kr05lfbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

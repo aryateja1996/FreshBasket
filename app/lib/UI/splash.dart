@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:app/UI/login.dart';
 import 'package:app/exports.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     Duration duration = const Duration(seconds: 2);
     Timer(duration, (){
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (ctx)=> const Home()), (route) => false);
+      //Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (ctx)=> const LoginPage()), (route) => false);
     });
   }
   @override
@@ -31,7 +32,7 @@ class _SplashState extends State<Splash> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            CustText(data: 'This is Splash Screen',textStyle: TextStyle(),)
+           Image(image:  AssetImage('assets/o.png'))
           ],
         ),
       ),

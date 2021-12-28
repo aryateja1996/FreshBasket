@@ -38,7 +38,8 @@ dependencies:
   keyboard_visibility: any
   firebase: ^9.0.2
   firebase_core: ^1.10.5  
-  
+  provider: ^3.0.0
+  location: ^2.3.5
   firebase_auth: ^3.3.3
   cloud_firestore: ^1.0.7
 
@@ -69,7 +70,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/1.jpg
+    - assets/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

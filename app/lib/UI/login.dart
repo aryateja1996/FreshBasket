@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                          // ignore: prefer_function_declarations_over_variables
                           void Function() a = (){};
                           return a;
-                      }, slient: true,
+                      }, slient: false,
                     ),
                     SizedBox(
                       height: 10,
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                          // ignore: prefer_function_declarations_over_variables
                           void Function() a = (){};
                           return a;
-                      },slient: true,
+                      },slient:false,
                     ),
                     SizedBox(
                       height: 10,
@@ -96,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                          // ignore: prefer_function_declarations_over_variables
                           void Function() a = (){};
                           return a;
-                      },slient: true,
+                      },slient: false,
                     ),
                   ],
                 ),
@@ -147,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
     switch (_pageState) {
       case 0:
         _backgroundColor = Colors.white;
-        _headingColor = Color(0xFFB40284A);
+        _headingColor = Colors.greenAccent;
 
         _headingTop = 100;
 
@@ -161,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 1:
-        _backgroundColor = Color(0xFFBD34C59);
+        _backgroundColor = Colors.greenAccent;
         _headingColor = Colors.white;
 
         _headingTop = 90;
@@ -176,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 2:
-        _backgroundColor = Color(0xFFBD34C59);
+        _backgroundColor = Colors.greenAccent;
         _headingColor = Colors.white;
 
         _headingTop = 80;
@@ -221,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                                 top: _headingTop,
                               ),
                               child: Text(
-                                "Octo Mart",
+                                "Fresh Basket",
                                 style: TextStyle(
                                     color: _headingColor, fontSize: 28),
                               ),
@@ -244,7 +244,7 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 32),
                       child: Center(
-                        child: Image.asset("assets/images/splash_bg.png"),
+                        child: Image.asset("assets/splash_bg.png"),
                       ),
                     ),
                     Container(
@@ -263,9 +263,9 @@ class _LoginPageState extends State<LoginPage> {
                           padding: EdgeInsets.all(20),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                              color: Color(0xFFB40284A),
+                              color: Color(0xFFF37121),
                               borderRadius: BorderRadius.circular(50)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Get Started",
                               style:
@@ -278,16 +278,16 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 )),
             AnimatedContainer(
-              padding: EdgeInsets.all(27),
+              padding: const EdgeInsets.all(27),
               width: _loginWidth,
               height: _loginHeight,
               curve: Curves.fastLinearToSlowEaseIn,
-              duration: Duration(milliseconds: 1000),
+              duration: const Duration(milliseconds: 1000),
               transform:
                   Matrix4.translationValues(_loginXOffset, _loginYOffset, 1),
               decoration: BoxDecoration(
                   color: Colors.white.withOpacity(_loginOpacity),
-                  borderRadius: BorderRadius.only(
+                  borderRadius:const BorderRadius.only(
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25))),
               child: Column(
@@ -296,8 +296,8 @@ class _LoginPageState extends State<LoginPage> {
                   Column(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(bottom: 4.2),
-                        child: Text(
+                        margin: const EdgeInsets.only(bottom: 4.2),
+                        child: const Text(
                           "Login To Continue",
                           style: TextStyle(fontSize: 20),
                         ),
@@ -310,15 +310,15 @@ class _LoginPageState extends State<LoginPage> {
                            // ignore: prefer_function_declarations_over_variables
                           void Function() a = (){};
                           return a;
-                        }, slient: true,
+                        }, slient: false,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       InputWithIcon(
                         icon: Icons.vpn_key,
                         hint: "Enter Password...",
-                        slient: true,
+                        slient: false,
                         saved: (input) {
                           logPassword = input;
                            // ignore: prefer_function_declarations_over_variables
@@ -328,7 +328,7 @@ class _LoginPageState extends State<LoginPage> {
                       )
                     ],
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 5,
                   ),
                   Column(
@@ -364,11 +364,11 @@ class _LoginPageState extends State<LoginPage> {
             ),
             AnimatedContainer(
               height: _registerHeight,
-              padding: EdgeInsets.all(32),
+              padding: const EdgeInsets.all(32),
               curve: Curves.fastLinearToSlowEaseIn,
-              duration: Duration(milliseconds: 1000),
+              duration:const Duration(milliseconds: 1000),
               transform: Matrix4.translationValues(0, _registerYOffset, 1),
-              decoration: BoxDecoration(
+              decoration:const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(25),
@@ -394,7 +394,7 @@ class _LoginPageState extends State<LoginPage> {
                           // ignore: prefer_function_declarations_over_variables
                           void Function() a = (){};
                           return a;
-                        },slient: true,
+                        },slient: false,
                       ),
                       SizedBox(
                         height: 20,
@@ -421,7 +421,7 @@ class _LoginPageState extends State<LoginPage> {
                           _showMyDialog();
                         },
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       GestureDetector(
@@ -430,7 +430,7 @@ class _LoginPageState extends State<LoginPage> {
                             _pageState = 1;
                           });
                         },
-                        child: OutlineBtn(
+                        child:const OutlineBtn(
                           btnText: "Back To Login",
                         ),
                       )

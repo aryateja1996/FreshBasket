@@ -1,4 +1,6 @@
+import 'package:app/UI/login.dart';
 import 'package:app/exports.dart';
+import 'package:app/location/location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const Splash(),
+      home:  HomeView(),
     );
   }
 }
